@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+
+.TopLine {
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    background-color: $main;
+    padding: 10px 0;
+
+    @include up(md){
+        background-color: $accent;
+        padding: 10px 20px;
+    }
+}
+
+.Container{
+    @include container();
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}

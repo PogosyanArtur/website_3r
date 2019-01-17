@@ -1,0 +1,59 @@
+@import '../../styles/index.scss';
+
+.Label,
+.InvalidLabel{
+    color: $main;
+    font-family: $ff-alpha;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.InvalidLabel{
+    color:red;
+}
+
+.Controls {
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 15px;
+    font-size: 20px;
+    color: $main1;
+    border: 2px solid $accent;
+    border-radius: 5px;
+}
+
+.InvalidStyle {
+    border: 2px solid red;
+}
+
+
+
+.Input {
+    height: 35px;
+}
+
+.Textarea {
+    height: 100px;
+    resize: none
+}
+
+.Submit {
+    padding: 10px 30px;
+    background-color: $main;
+    border: none;
+    color: $accent;
+    font-family: $ff-alpha;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.Submit:hover {
+    background-color: rgba($main, 0.8)
+}
+
+.Submit_disable,
+.Submit_disable:hover {
+    background-color: $gray100;
+    color: $white;
+    cursor: default;
+}

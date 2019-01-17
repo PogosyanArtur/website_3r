@@ -1,0 +1,82 @@
+@import '../../styles/index.scss';
+
+.Title {
+    margin-bottom: 40px;
+
+    @include down(lg) {
+        margin-bottom: 10px;
+    }
+}
+
+.Label {
+    font-family: $ff-alpha;
+    font-size: 30px;
+    font-weight: normal;
+    color: $main1;
+    margin: 0;
+    padding: 20px 0 20px 0;
+    @include down(sm) {
+        font-size: 20px;
+        padding: 0;
+    }
+}
+
+.Content {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+    @include down(lg) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+
+    }
+}
+
+.ContentContainer {
+    width: 450px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include down(lg) {
+        margin-top: 30px;
+    }
+    @include down(sm) {
+        width: 100%;
+    }
+}
+
+.Context {
+    font-family: $ff-alpha;
+    line-height: 1.5;
+}
+
+.Link {
+    font-family: $ff-alpha;
+    text-decoration: none;
+    color: $main1;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Link_lg {
+    font-size: 30px;
+    @include down(sm) {
+    font-size: 16px;
+    }
+}
+
+.TelephoneLine {
+    height: 8px;
+    width: 100px;
+    background-color: $accent;
+    margin: 10px 0;
+}
+
+.Form {
+    margin-top: 40px;
+}

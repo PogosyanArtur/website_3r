@@ -1,0 +1,12 @@
+@import '../../styles/index.scss';
+
+.NavigationLinks {
+    display: flex;
+    justify-content: flex-end;
+
+    @include down(md){
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

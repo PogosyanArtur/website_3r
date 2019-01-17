@@ -1,0 +1,36 @@
+@mixin above($min){
+	@media screen and (min-width : $min) {
+		@content;
+	}
+}
+
+@mixin below($max){
+	@media screen and (max-width : $max){
+		@content;
+	}
+}
+@mixin between($min,$max){
+	@media screen and (min-width : $min) and (max-width : $max){
+		@content;
+	}
+}
+
+
+@mixin up($min){
+	@media screen and (min-width : #{map-get($breakpoints, $min)}){
+		@content;
+	}
+}
+
+@mixin down($max){
+	@media screen and (max-width : #{map-get($breakpoints, $max)}) {
+		@content;
+	}
+}
+
+@mixin only($min,$max){
+	@media screen and (min-width : #{map-get($breakpoints, $min)}) and (max-width : #{map-get($breakpoints, $max - 1)}){
+		@content;
+	}
+}
+

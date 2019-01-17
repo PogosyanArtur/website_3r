@@ -1,0 +1,17 @@
+@import '../../styles/index.scss';
+
+.Logo {
+    color:$white;
+    font-family: $ff-betta;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    @include down(md){
+        color:$gray900;
+    }
+}

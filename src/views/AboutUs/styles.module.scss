@@ -1,0 +1,69 @@
+@import '../../styles/index.scss';
+.AboutUs{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.1);
+    @include down(lg){
+        justify-content: stretch;
+    }
+    @include down(md){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.Content{
+    box-sizing: border-box;
+    width: 30%;
+    padding: 0 40px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+    @include down(lg){
+        width: 65%;
+        margin-bottom: 0px;
+    }
+    @include down(md){
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.Title {
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+.Context{
+    font-size: 18px;
+    font-family: $ff-alpha;
+    line-height: 1.5;
+}
+.Context::first-letter{
+    padding-left:25px;
+}
+
+.Image{
+    width: 50%;
+    background-image: linear-gradient(to top right, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('../../static/images/aboutus-bg.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @include down(lg){
+        width: 35%;
+        height: 400px;
+        order: -1;
+    }
+    @include down(md){
+        height: 300px;
+        width: 100%;
+    }
+
+}

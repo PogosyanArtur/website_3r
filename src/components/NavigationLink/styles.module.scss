@@ -1,0 +1,43 @@
+@import '../../styles/index.scss';
+
+.Link {
+    font-family: $ff-alpha;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    display: block;
+    box-sizing: border-box;
+    padding: 17px 20px;
+
+    transition: color 0.3s;
+
+    &_active,
+    &:hover,
+    &:focus {
+        color: $accent;
+    }
+
+    &_view_murky {
+        color: $gray900;
+
+    }
+
+    &_view_murky:not(:last-child) {
+        border-bottom: 2px solid $white;
+    }
+
+    &_view_murky.Link_active,
+    &_view_murky:hover {
+        color: $white;
+    }
+
+
+    @include down(md) {
+        width: 250px;
+    }
+}

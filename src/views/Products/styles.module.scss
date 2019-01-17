@@ -1,0 +1,22 @@
+@import '../../styles/index.scss';
+
+.Title{
+    margin: 50px 0;
+}
+
+.Cards{
+    @include container();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    @include down(md){
+        flex-direction: column;
+    }
+
+}
+
+.Card {
+    margin: 60px 30px;
+}

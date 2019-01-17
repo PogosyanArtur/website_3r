@@ -1,0 +1,78 @@
+@import '../../styles/index.scss';
+
+.Block {
+    width: 100%;
+    background-color: $main;
+
+    position: fixed;
+    top:40px;
+    left: 0;
+    right:0;
+    display: block;
+    margin: 0 auto;
+    z-index: 1000;
+
+    @include down(md) {
+        background-color: $accent;
+    }
+}
+.Backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $accent;
+}
+
+.HamburgerIcon{            
+    position: absolute;
+    top:20px;
+    right:20px;
+    z-index: 1200;
+}
+
+.Navigation {
+    padding-top: 120px;
+}
+
+
+.Container {
+    @include container;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoBox {
+    background-color: $accent;
+    width: 170px;
+    max-width: 170px;
+    height: 100%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include down(md){
+        margin-left: 0px;
+    }
+}
+
+
+.FadeOut-enter {
+    transform:translateY(-100%);            
+}
+
+.FadeOut-enter-active {
+    transform:translateY(0%); 
+    transition: all 0.4s ease-out;
+}
+
+
+.FadeOut-exit-active {
+    transform:translateY(-100%);  
+    transition: all 0.4s ease-out;
+}
+

@@ -1,0 +1,13 @@
+@import '../../styles/index.scss';
+
+.Footer {
+    background-color: $main;
+    text-align: center;
+    margin-top: 35px;
+}
+.Copyright{
+    color:$white;
+    margin: 0;
+    padding: 20px 0;
+    font-family: $ff-alpha;
+}

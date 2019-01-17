@@ -1,0 +1,162 @@
+@import '../../styles/index.scss';
+
+.MenuBarContainer {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+
+.MenuBar {
+    background-color: $gray900;
+    position: absolute;
+    height: 1px;
+    width: 17px;
+    border-radius: 5px;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+}
+
+.TopBar {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: topDwon-reverse;
+}
+
+.MiddleBar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: unvisiable-reverse;
+}
+
+.BottomBar {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: bottomUp-reverse;
+}
+
+
+.Active .TopBar {
+    animation-name: topDwon;
+}
+
+.Active .MiddleBar {
+    animation-name: unvisiable;
+}
+
+.Active .BottomBar {
+    animation-name: bottomUp;
+}
+
+@keyframes topDwon {
+
+    0% {
+        top: 35%;
+    }
+
+    50%,
+    60% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    100% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+}
+
+@keyframes unvisiable {
+
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+}
+
+@keyframes bottomUp {
+
+    0% {
+        top: 65%;
+    }
+
+    50%,
+    60% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+}
+
+
+@keyframes topDwon-reverse {
+
+    0% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+
+    }
+
+    50%,
+    60% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    100% {
+        top: 35%;
+    }
+
+}
+
+@keyframes unvisiable-reverse {
+
+    0% {
+
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        top: 50%;
+    }
+
+}
+
+@keyframes bottomUp-reverse {
+
+    0% {
+
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    50%,
+    60% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 65%;
+    }
+
+}

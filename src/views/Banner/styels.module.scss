@@ -1,0 +1,56 @@
+@import '../../styles/index.scss';
+
+
+.Banner {
+    background-color: rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../static/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+    @include down(lg){
+        height:800px;
+    }
+    @include down(md){
+        height:600px;
+    }
+    @include down(sm){
+        height:450px;
+    }
+}
+
+.Title{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:300px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    letter-spacing: 3px;
+    color:$white;
+    text-transform: uppercase;
+    font-family: $ff-alpha;
+    font-weight: 400;
+    font-size: 60px;
+    width:65%;
+    line-height: 1.3;
+
+    @include down(lg){
+        top:250px;
+        font-size: 50px;
+    }
+    @include down(md){
+        font-size: 35px;
+    }
+    @include down(sm){
+        font-size: 22px;
+        width:90%;
+    }
+
+}

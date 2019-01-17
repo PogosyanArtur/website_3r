@@ -1,0 +1,40 @@
+@import '../../styles/index.scss';
+
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Title {
+    font-family: $ff-alpha;
+    font-size: 50px;
+    text-align: center;
+    color:$gray100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 20px 0;
+    line-height: 2;
+
+    @include down(md){
+        font-size: 35px;
+    }
+
+}
+
+.Line {
+    margin: 0 auto;
+    width:60%;
+    height:8px;
+    background-color: $accent;
+    
+    @include down(md){
+        height:6px;
+    }
+}
+
+.Line_left{
+    margin: 0;
+}

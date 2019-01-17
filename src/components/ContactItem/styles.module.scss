@@ -1,0 +1,27 @@
+@import '../../styles/index.scss';
+
+
+.Link{
+    color: $main1;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s;
+
+    &:hover{
+        color:$white;
+    }
+
+    @include down(md){
+        color: $white;
+
+        &:hover{
+            color:$accent;
+        }
+    }
+}
+
+.Label{
+    font-family: $ff-alpha;
+    padding: 0 10px;
+    display: inline-block;
+}

@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+
+import Layout from './layout'
+import Banner from './views/Banner'
+import Products from './views/Products'
+import AboutUs from './views/AboutUs'
+import Achievement from './views/Achievement'
+import Navigation  from './views/Navigation'
+import TopLine from './views/TopLine'
+import Contacts from './views/Contacts'
+import Footer from './views/Footer'
+import Map from './views/Map'
+
 
 class App extends Component {
-  render() {
+
+  render(){
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <Layout>
+        <header>
+          <TopLine />
+          <Navigation />
         </header>
-      </div>
-    );
+        <Banner/>
+        <Products />
+        <AboutUs/>
+        <Achievement />
+        <Map/>
+        <Contacts/>
+        <Footer/>
+      </Layout>
+    )
   }
 }
+export default App
 
-export default App;
